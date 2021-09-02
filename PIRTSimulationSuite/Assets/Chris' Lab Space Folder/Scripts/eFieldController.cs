@@ -5,26 +5,28 @@ using UnityEngine;
 public class eFieldController : MonoBehaviour
 {
     public GameObject Vector;
+    public Transform spawnPoint;
     public Vector3 position;
     public int stepSize = 1;
-    public int height = 5;
-    public int width = 25;
-    public int depth = 5;
+    public int height = 10;
+    public int width = 10;
+    public int depth = 10;
 
     public VectorController launch;
 
     // Start is called before the first frame update
     void Start()
     {
-        position = this.gameObject.transform.position;
+        position = spawnPoint.transform.position;
+        
         //Instantiation in the X-Direction
         for (int xCount = 0; xCount <= width; xCount++)
         {
-            position.y = 1;
+            position.y = spawnPoint.transform.position.y;
             //Instantiation in the y direction
             for (int yCount = 0; yCount <= height; yCount++)
             {
-                position.z = -10;
+                position.z = spawnPoint.transform.position.z;
                 //Instantiation in the z direction
                 for (int zCount = 0; zCount <= depth; zCount++)
                 {
