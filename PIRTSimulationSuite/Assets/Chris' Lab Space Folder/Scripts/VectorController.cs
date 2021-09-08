@@ -26,7 +26,7 @@ public class VectorController : MonoBehaviour
     public GameObject childArrowObject;
 
     //Referencing the charge controller script
-    public ChargeController getCharge;
+    public ChargeController chargeController;
 
     //Dummy trigger boolean value
     public bool trigger = true;
@@ -69,6 +69,7 @@ public class VectorController : MonoBehaviour
         {
             bodyList.Add(fooObject);
         }
+        
     }
 
     public void startingController()
@@ -76,6 +77,13 @@ public class VectorController : MonoBehaviour
         startup = true;
         update = true;
 
+    }
+    public void stopController()
+    {
+        startup = false;
+        update = false;
+
+        
     }
 
     //Method for calculating te electric field and changing the direction of the arrows
@@ -100,7 +108,7 @@ public class VectorController : MonoBehaviour
                 float distanceZ = chargeList[counter].transform.position.z - vectorList[count].transform.position.z;
 
                 //Obtaining Charge Value for q
-                getCharge.RetrieveChargeValue(counter, out int q);
+                //chargeController.RetrieveChargeValue(counter, out int q);
 
                 //Direcitonal E-Field calculations
                 Ex += -k * q * distanceX / Mathf.Pow(distanceMagnitude, 3);
@@ -138,5 +146,13 @@ public class VectorController : MonoBehaviour
     {
         polar = inRadians * 180 / Mathf.PI;
         elevation = inElevation * 180 / Mathf.PI;
+    }
+
+    public void Reset()
+    {
+        stopController();
+        chargeList.Clear();
+        startingController();
+
     }
 }
