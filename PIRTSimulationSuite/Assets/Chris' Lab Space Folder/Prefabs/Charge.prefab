@@ -183,7 +183,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_AttachTransform: {fileID: 0}
-  m_AttachEaseInTime: 9
+  m_AttachEaseInTime: 100
   m_MovementType: 2
   m_VelocityDamping: 1
   m_VelocityScale: 1

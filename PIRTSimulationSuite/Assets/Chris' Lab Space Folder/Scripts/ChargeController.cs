@@ -25,13 +25,14 @@ public class ChargeController : MonoBehaviour
         }
     }
 
+    /*
     //Returning the charge value to vector controller script
     public void RetrieveChargeValue(int currentCharge, out int chargeValue)
     {
         
         chargeValue = ChargeValueList[currentCharge];
     }
-
+    */
     public  void UpdateChargeList()
     {
         //Detecting amount of spheres  and applying to amount of charges

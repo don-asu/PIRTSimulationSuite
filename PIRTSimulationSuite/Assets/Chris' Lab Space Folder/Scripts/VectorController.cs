@@ -110,7 +110,7 @@ public class VectorController : MonoBehaviour
                 //Obtaining Charge Value for q
                 //chargeController.RetrieveChargeValue(counter, out int q);
 
-                //Direcitonal E-Field calculations
+                //Directional E-Field calculations
                 Ex += -k * q * distanceX / Mathf.Pow(distanceMagnitude, 3);
                 Ey += -k * q * distanceY / Mathf.Pow(distanceMagnitude, 3);
                 Ez += -k * q * distanceZ / Mathf.Pow(distanceMagnitude, 3);
