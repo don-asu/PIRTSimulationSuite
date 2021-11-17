@@ -82,8 +82,6 @@ public class VectorController : MonoBehaviour
     {
         startup = false;
         update = false;
-
-        
     }
 
     //Method for calculating te electric field and changing the direction of the arrows
